@@ -12,7 +12,7 @@ pipeline {
 
     // Tool configuration
     tools {
-        maven 'Maven-3.9'  // Configure this in Jenkins Global Tool Configuration
+        maven 'Maven-3.9.12'  // Configure this in Jenkins Global Tool Configuration
     }
 
     stages {
