@@ -52,7 +52,7 @@ pipeline {
 
                 sh '''
                                         echo "Maven Wrapper version:"
-                                        chmod +x mvn
+                                        chmod +x mvnw
                                         mvn --version
                                         echo ""
                                         echo "Compiling application..."
