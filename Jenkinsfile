@@ -52,11 +52,11 @@ pipeline {
 
                 sh '''
                                         echo "Maven Wrapper version:"
-                                        chmod +x mvnw
-                                        ./mvnw --version
+                                        chmod +x mvn
+                                        mvn --version
                                         echo ""
                                         echo "Compiling application..."
-                                        ./mvnw clean compile -B
+                                        mvn clean compile -B
                                     '''
             }
         } // stage build
@@ -71,7 +71,7 @@ pipeline {
 
                 sh '''
                         echo "Executing JUnit tests..."
-                        ./mvnw test -B
+                        mvn test -B
                     '''
 
             }
@@ -98,7 +98,7 @@ pipeline {
 
                     sh '''
                         echo "Creating JAR package..."
-                        ./mvnw package -DskipTests -B
+                        mvn package -DskipTests -B
                         echo ""
                         echo "Build artifacts:"
                         ls -la target/*.jar
