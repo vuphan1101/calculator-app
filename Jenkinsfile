@@ -35,7 +35,7 @@ pipeline {
 
                 // For demo with local files (already in workspace)
                 // In real scenario, use: checkout scm
-                git url: 'https://github.com/vuphan1101/calculator-app.git', branch: 'main'
+                git url: 'https://github.com/vuphan1101/calculator-app.git', branch: 'master'
                 sh '''
                             echo "Current directory contents:"
                             ls -la
